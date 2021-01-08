@@ -9,10 +9,12 @@ namespace Dates
             Console.Clear();
 
             var data = DateTime.Now;
+            Console.WriteLine(data);
 
-            var formatada = String.Format("{0:yyyy/MM/dd hh:mm:ss}", data);
-            Console.WriteLine(formatada);
 
+            Console.WriteLine(data.AddDays(12));
+            Console.WriteLine(data.AddDays(1));
+            Console.WriteLine(data.AddYears(1));
         }
     }
 }
