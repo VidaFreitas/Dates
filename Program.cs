@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 namespace Dates
 {
@@ -9,12 +8,17 @@ namespace Dates
         {
             Console.Clear();
 
+            var utcDate = DateTime.UtcNow;
+            Console.WriteLine(DateTime.Now);
+            Console.WriteLine(utcDate);
 
-            var pt = new CultureInfo("pt-BR");
-            var br = new CultureInfo("en-US");
-            var de = new CultureInfo("de-DE");
+            Console.WriteLine(utcDate.ToLocalTime());
 
-            Console.WriteLine(DateTime.Now.ToString("D", pt));
+            var timezoneAustralia = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Auckland");
+            Console.WriteLine(timezoneAustralia);
+
+            var horaAustralia = TimeZoneInfo.ConvertTimeFromUtc(utcDate, timezoneAustralia);
+            Console.WriteLine(horaAustralia);
         }
     }
 }
