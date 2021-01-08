@@ -8,17 +8,20 @@ namespace Dates
         {
             Console.Clear();
 
-            var utcDate = DateTime.UtcNow;
-            Console.WriteLine(DateTime.Now);
-            Console.WriteLine(utcDate);
+            var timeSpam = new TimeSpan();
+            Console.WriteLine(timeSpam);
 
-            Console.WriteLine(utcDate.ToLocalTime());
+            var timeSpanNanosegundos = new TimeSpan(1);
+            Console.WriteLine(timeSpanNanosegundos);
 
-            var timezoneAustralia = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Auckland");
-            Console.WriteLine(timezoneAustralia);
+            var timeSpanHoraMinutoSegundo = new TimeSpan(5, 12, 8);
+            Console.WriteLine(timeSpanHoraMinutoSegundo);
 
-            var horaAustralia = TimeZoneInfo.ConvertTimeFromUtc(utcDate, timezoneAustralia);
-            Console.WriteLine(horaAustralia);
+            var timeSpanDiaHoraMinutoSegundo = new TimeSpan(3, 5, 50, 10);
+            Console.WriteLine(timeSpanDiaHoraMinutoSegundo);
+
+            var timeSpanHoraMinutoSegundoMilisegundo = new TimeSpan(15, 12, 55, 8, 100);
+            Console.WriteLine(timeSpanHoraMinutoSegundoMilisegundo);
         }
     }
 }
