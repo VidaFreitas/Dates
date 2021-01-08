@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Dates
 {
@@ -8,13 +9,12 @@ namespace Dates
         {
             Console.Clear();
 
-            var data = DateTime.Now;
-            Console.WriteLine(data);
 
+            var pt = new CultureInfo("pt-BR");
+            var br = new CultureInfo("en-US");
+            var de = new CultureInfo("de-DE");
 
-            Console.WriteLine(data.AddDays(12));
-            Console.WriteLine(data.AddDays(1));
-            Console.WriteLine(data.AddYears(1));
+            Console.WriteLine(DateTime.Now.ToString("D", pt));
         }
     }
 }
